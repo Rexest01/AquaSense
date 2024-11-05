@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>AquaSense | Landing Page</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Navegación -->
+        <nav>
+            <!-- Logo -->
+            <div class="nav_logo">
+                <img src="assets/aqua.png" alt="AquaSense Logo">
+            </div>
+            <!-- Enlaces de navegación -->
+            <ul class="nav_links">
+                <li class="link"><a href="#">Innovación</a></li>
+                <li class="link"><a href="#servicios">Servicios</a></li>
+                <li class="link"><a href="#primeros-pasos">Primeros pasos</a></li>
+                <li class="link"><a href="#descargar">Descargar</a></li>
+            </ul>
+            <!-- Barra de búsqueda -->
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <span class="ri-search-line"></span>
+            </div>
+            <!-- Botón Log In con clase para evento -->
+            <div class="login" id="loginButton">
+                <span class="ri-user-fill"></span> Log In
+            </div>
+        </nav>
+
+        <!-- Contenedor de destino -->
+        <div class="destination__container">
+            <!-- Fondo de imágenes decorativas -->
+            <img class="bg__img__1" src="assets/bg-dots.png" alt="Decorative Image 1">
+            <img class="bg__img__2" src="assets/bg-arrow.png" alt="Decorative Image 2">
+            
+            <!-- Contenido principal -->
+            <div class="content">
+                <h1>Bienvenido a <span>AquaSense</span></h1>
+                <p>.</p>
+                <button class="btn">Empieza</button>
+            </div>
+            <div class="destination__grid">
+                <div class="destination__card">
+                    <img src="assets/agri.jpg" alt="destination">
+                    <div class="card__content">
+                        <h4>Testimonio de Gabriela Ccopa</h4>
+                        <p>Presentamos la experiencia de una de nuestras usuarias mas fieles.</p>
+                        <button class="btn">Lee más</button>
+                    </div>
+                </div>
+                <div class="destination__card">
+                    <img src="assets/lluvia.png" alt="destination">
+                    <div class="card__content">
+                        <h4>Caos climatológico</h4>
+                        <p>Un 70% de cultivos a nivel mundial ha sido dañado por las lluvias.</p>
+                        <button class="btn">Lee más</button>
+                    </div>
+                </div>
+                <div class="destination__card">
+                    <img src="assets/iot.png" alt="destination">
+                    <div class="card__content">
+                        <h4>Controla tus cultivos remotamente</h4>
+                        <p>Presentamos la nueva versión de nuestro sensor IOT.</p>
+                        <button class="btn">Lee más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="socials">
+                <span class="ri-tiktok-fill"></span>
+                <span class="ri-facebook-fill"></span>
+                <span class="ri-twitter-fill"></span>
+                <span class="ri-instagram-line"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="authModal" style="display: none;">
+        <!-- Modal de Registro -->
+        <div class="modal" id="signupModal" style="display: none;">
+            <h2>Crear una Cuenta</h2>
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Apellido" required>
+            <p>Asegúrate de poner los datos correctos</p>
+            <input type="email" placeholder="Email" required>
+            <p>Te enviaremos notificaciones a este correo</p>
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button class="btn disabled" onclick="createAccount()" disabled>Agree and continue</button>
+            <span class="toggle-link" onclick="showLoginModal()">¿Tienes una cuenta? Inicia sesión</span>
+        </div>
+    
+        <!-- Modal de Iniciar Sesión -->
+        <div class="modal" id="loginModal" style="display: none;">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <a href="#" class="forgot-password">¿Olvidaste la contraseña?</a>
+            <button class="btn disabled" onclick="continueToNextPage()" disabled>Login</button>
+            <span class="toggle-link" onclick="showSignupModal()">¿Eres nuevo? Regístrate</span>
+        </div>
+    </div>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <p>AquaSense ofrece una gama de servicios para optimizar el uso del agua en la agricultura:</p>
+        <ul>
+            <li><strong>Riego Automatizado Basado en Sensores:</strong> Monitorea y ajusta el riego en tiempo real, según las condiciones climáticas y del suelo.</li>
+            <li><strong>Acceso Remoto:</strong> Controla y supervisa el sistema de riego desde cualquier dispositivo móvil.</li>
+            <li><strong>Capacitación y Soporte 24/7:</strong> Ofrecemos capacitación y asistencia técnica continua para garantizar el mejor uso de nuestros sistemas.</li>
+            <li><strong>Monitoreo Continuo:</strong> Servicio basado en suscripción que proporciona datos en tiempo real y análisis para la toma de decisiones informada.</li>
+        </ul>
+    </section>
+
+    <!-- Sección de Primeros Pasos -->
+    <section id="primeros-pasos">
+        <h2>Primeros Pasos</h2>
+        <ol>
+            <li><strong>Instala los Dispositivos:</strong> Coloca los sensores en los puntos estratégicos de tus cultivos para monitorear las condiciones del suelo y el clima.</li>
+            <li><strong>Conecta y Configura:</strong> Usa la aplicación móvil de AquaSense para conectar los dispositivos y configurar las preferencias de riego.</li>
+            <li><strong>Monitorea y Ajusta:</strong> Una vez instalado, podrás monitorear y ajustar el sistema de riego desde la app de forma remota.</li>
+            <li><strong>Capacitación y Soporte:</strong> Aprovecha nuestro servicio de capacitación inicial y soporte 24/7 para cualquier consulta o problema.</li>
+        </ol>
+    </section>
+
+    <!-- Sección de Descargas -->
+    <section id="descargar">
+        <h2>Descargar la Aplicación AquaSense</h2>
+        <p>Descarga la aplicación para controlar tus cultivos desde cualquier lugar. Disponible en:</p>
+        <div class="download-buttons">
+            <!-- Enlace para Android -->
+            <div class="download-option">
+                <img src="/tp_landingpage_AquaSense/img/and.png" alt="Android Logo">
+                <a href="#" class="btn">Descargar para Android</a>
+            </div>
+            <!-- Enlace para iOS -->
+            <div class="download-option">
+                <img src="/tp_landingpage_AquaSense/img/io.png" alt="iOS Logo">
+                <a href="#" class="btn">Descargar para iOS</a>
+            </div>
+        </div>
+        <p><strong>Pasos para la descarga e instalación:</strong></p>
+    
+            <li><strong>Accede al Enlace:</strong> Haz clic en el botón de descarga correspondiente para tu sistema operativo (Android o iOS).</li>
+            <li><strong>Instala la Aplicación:</strong> Sigue las instrucciones en pantalla para instalar AquaSense en tu dispositivo.</li>
+            <li><strong>Configura tu Cuenta:</strong> Inicia sesión o crea una cuenta nueva para comenzar a usar la app.</li>
+        </ol>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>AquaSense</h3>
+            <p>Soluciones inteligentes para el uso sostenible del agua en la agricultura.</p>
+            <ul class="footer-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#primeros-pasos">Primeros Pasos</a></li>
+                <li><a href="#descargar">Descargar</a></li>
+            </ul>
+            <div class="footer-socials">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-tiktok-fill"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Esperar a que el DOM esté cargado antes de añadir el evento
+        document.addEventListener('DOMContentLoaded', function() {
+            // Asignar evento al botón de login
+            document.getElementById('loginButton').addEventListener('click', showLoginModal);
+        });
+
+        function showLoginModal() {
+            document.getElementById('authModal').style.display = 'block';
+            document.getElementById('loginModal').style.display = 'block';
+            document.getElementById('signupModal').style.display = 'none';
+        }
+
+        function showSignupModal() {
+            document.getElementById('authModal').style.display = 'block';
+            document.getElementById('loginModal').style.display = 'none';
+            document.getElementById('signupModal').style.display = 'block';
+        }
+
+        function createAccount() {
+            alert("Cuenta creada exitosamente");
+        }
+
+        function continueToNextPage() {
+            alert("Sesión iniciada");
+            document.getElementById('authModal').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const signupInputs = document.querySelectorAll('#signupModal input');
+    const signupButton = document.querySelector('#signupModal .btn');
+
+    const loginInputs = document.querySelectorAll('#loginModal input');
+    const loginButton = document.querySelector('#loginModal .btn');
+
+    signupInputs.forEach(input => input.addEventListener('input', () => {
+        signupButton.disabled = !Array.from(signupInputs).every(input => input.value.trim() !== '');
+        signupButton.classList.toggle('disabled', signupButton.disabled);
+    }));
+
+    loginInputs.forEach(input => input.addEventListener('input', () => {
+        loginButton.disabled = !Array.from(loginInputs).every(input => input.value.trim() !== '');
+        loginButton.classList.toggle('disabled', loginButton.disabled);
+    }));
+});
+    </script>
+
+</body>
+</html>
